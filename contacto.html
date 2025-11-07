@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre el fascinante mundo de los supercarros: las máquinas más avanzadas, rápidas y exclusivas del planeta. Información, noticias y características.">
+    <meta name="keywords" content="supercarros, hypercars, automóviles deportivos, Lamborghini, Ferrari, Bugatti, McLaren, Porsche, coches de lujo, alta velocidad">
+    <meta name="author" content="Carlos Ernesto Mateo Tibrey">
+    <meta name="robots" content="index, follow">
+    <title>Contacto - Supercarros Ernesto</title>
+    
+    <link rel="icon" href="Imagenes/primer_Logo.png" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Imagenes/segundo_Logo.png" alt="segundo_Logo" height="60" > Supercarros Ernesto
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="enlaces.html">Enlaces de Interés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalPoliticas">Políticas</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm ms-2" id="btnModoOscuro">
+                            <i class="bi bi-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Contáctanos</h1>
+            <p class="lead">Estamos aquí para responder todas tus preguntas sobre el mundo de los supercarros</p>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Formulario de Contacto</h3>
+                        <p class="text-muted">Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+                        
+                        <form id="formContacto">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="nombreContacto" class="form-label">Nombre completo *</label>
+                                    <input type="text" class="form-control" id="nombreContacto" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="emailContacto" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="emailContacto" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="asuntoContacto" class="form-label">Asunto *</label>
+                                <select class="form-select" id="asuntoContacto" required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="Consulta general">Consulta general</option>
+                                    <option value="Información técnica">Información técnica</option>
+                                    <option value="Colaboración">Propuesta de colaboración</option>
+                                    <option value="Publicidad">Publicidad</option>
+                                    <option value="Otros">Otros</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensajeContacto" class="form-label">Mensaje *</label>
+                                <textarea class="form-control" id="mensajeContacto" rows="6" required placeholder="Describe tu consulta o propuesta..."></textarea>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="aceptoPoliticas" required>
+                                <label class="form-check-label" for="aceptoPoliticas">
+                                    Acepto las <a href="#" data-bs-toggle="modal" data-bs-target="#modalPoliticas">políticas de privacidad</a>
+                                </label>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="button" class="btn btn-outline-secondary me-md-2" onclick="enviarCorreo()">
+                                    <i class="bi bi-envelope me-2"></i>Enviar por Email
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-5">
+            <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">¿Por qué los nuevos hiperdeportivo son híbridos?</h5>
+                            <p class="card-text">La electrificación no se usa para ahorrar combustible, sino para maximizar el rendimiento. Los motores eléctricos proporcionan par motor instantáneo (eliminando el turbolag) y una potencia adicional (boost) para la máxima aceleración.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">¿Por qué se utiliza tanto la fibra de carbono?</h5>
+                            <p class="card-text">La fibra de carbono ofrece una rigidez torsional superior con un peso extremadamente bajo. Esto es crucial para la seguridad (absorción de impacto) y para la precisión de manejo, ya que minimiza la flexión del chasis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">¿Cuál es el coste de mantenimiento de un hiperdeportivo?</h5>
+                            <p class="card-text">El coste es significativamente mayor que un vehículo estándar, debido a los materiales especializados y la mano de obra. Un cambio de neumáticos, frenos carbocerámicos o una revisión mayor pueden costar fácilmente decenas de miles de euros o dólares.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">¿Se pueden conducir los hiperdeportivo a diario?</h5>
+                            <p class="card-text">Sí, la mayoría están homologados para calle. Sin embargo, su extrema rigidez, baja altura y embragues de alto rendimiento los hacen menos cómodos y prácticos para el uso diario que un GT de lujo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                     <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">¿Qué documentación se necesita para adquirir uno?</h5>
+                            <p class="card-text">Además de la documentación financiera estándar, la compra a menudo requiere una prueba de solvencia y, en el caso de modelos limitados, una aprobación del fabricante para entrar en la lista de espera, asegurando que el coche vaya a un cliente seleccionado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                     <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">¿Por qué la producción es tan limitada en muchos hiperdeportivos?</h5>
+                            <p class="card-text">Se limita para asegurar la exclusividad, mantener el valor de reventa y controlar la calidad de producción de componentes hechos a mano. Muchos modelos (ej. Koenigsegg o Pagani) están limitados a solo unas docenas de unidades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal fade" id="modalPoliticas" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Políticas de Privacidad</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>1. Información que recopilamos</h6>
+                    <p>Recopilamos información que usted nos proporciona directamente, como su nombre, dirección de correo electrónico y cualquier otra información que elija proporcionar.</p>
+                    
+                    <h6>2. Uso de la información</h6>
+                    <p>Utilizamos la información que recopilamos para:
+                    <ul>
+                        <li>Proporcionar, operar y mantener nuestro sitio web</li>
+                        <li>Mejorar, personalizar y expandir nuestro sitio web</li>
+                        <li>Comprender y analizar cómo utiliza nuestro sitio web</li>
+                        <li>Desarrollar nuevos productos, servicios, características y funcionalidades</li>
+                    </ul>
+                    </p>
+                    
+                    <h6>3. Compartir información</h6>
+                    <p>No compartimos información personal con terceros, excepto en las siguientes circunstancias:
+                    <ul>
+                        <li>Con su consentimiento explícito</li>
+                        <li>Para cumplir con la ley</li>
+                        <li>Para proteger nuestros derechos</li>
+                    </ul>
+                    </p>
+                    
+                    <h6>4. Seguridad</h6>
+                    <p>Implementamos medidas de seguridad para proteger su información personal contra accesos no autorizados, alteración, divulgación o destrucción.</p>
+                    
+                    <h6>5. Sus derechos</h6>
+                    <p>Tiene derecho a acceder, corregir o eliminar su información personal. Puede contactarnos en cualquier momento para ejercer estos derechos.</p>
+                    
+                    <h6>6. Cambios a esta política</h6>
+                    <p>Podemos actualizar nuestra política de privacidad periódicamente. Le notificaremos cualquier cambio publicando la nueva política en esta página.</p>
+                    
+                    <div class="alert alert-info mt-4">
+                        <i class="bi bi-info-circle me-2"></i>
+                        Si tiene alguna pregunta sobre estas políticas, no dude en contactarnos.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="aceptarPoliticas()">Aceptar Políticas</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100">
+    <div id="toastSuccess" class="toast align-items-center text-bg-success border-0" role="alert">
+        <div class="d-flex">
+            <div class="toast-body" id="toastSuccessMessage">
+                ¡Operación exitosa!
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+    
+    <div id="toastWarning" class="toast align-items-center text-bg-warning border-0" role="alert">
+        <div class="d-flex">
+            <div class="toast-body" id="toastWarningMessage">
+                Advertencia: Complete todos los campos.
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+    
+    <div id="toastInfo" class="toast align-items-center text-bg-info border-0" role="alert">
+        <div class="d-flex">
+            <div class="toast-body" id="toastInfoMessage">
+                Información importante.
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>
+</div>
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5><a class="navbar-brand" href="index.html">
+                    <img src="Imagenes/segundo_Logo.png" alt="segundo_Logo" height="60" > Supercarros Ernesto</a></h5>
+                    <p>Tu fuente confiable de información sobre los automóviles más exclusivos y potentes del mundo.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Inicio</a></li>
+                        <li><a href="enlaces.html" class="text-light">Enlaces de Interés</a></li>
+                        <li><a href="contacto.html" class="text-light">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Síguenos</h5>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/UNPHU/?locale=es_LA" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="https://x.com/UNPHURD" class="text-light me-3"><i class="bi bi-x"></i></a>
+                        <a href="https://www.instagram.com/unphu/?hl=es" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/user/UNPHURD" class="text-light me-3"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2025 Supercarros Ernesto</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
